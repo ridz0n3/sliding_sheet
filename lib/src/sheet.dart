@@ -1051,7 +1051,12 @@ class _SlidingSheetState extends State<SlidingSheet>
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          color: widget.backdropColor,
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+            child: Container(
+              color: Colors.black.withOpacity(0.3),
+            ),
+          ),
         ),
       ),
     );

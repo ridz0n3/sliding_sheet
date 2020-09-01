@@ -126,6 +126,7 @@ class _MyAppState extends State<MyApp> {
       headerBuilder: buildHeader,
       footerBuilder: buildFooter,
       builder: buildChild,
+      backdropColor: Colors.red.withOpacity(0.6),
     );
   }
 
